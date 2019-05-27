@@ -1,0 +1,41 @@
+{
+	"name": "vican",
+	"version": "1.0.0",
+	"description": "Script to verify if are necessary that you commit your projects",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
+		"build": "npm run build:commonjs && npm run build:es",
+		"start": "ts-node src/",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/LeonBonetti/Vican.git"
+	},
+	"keywords": [
+		"git",
+		"script",
+		"nodejs",
+		"unix",
+		"windows",
+		"mac"
+	],
+	"author": "Leonardo Bonetti",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/LeonBonetti/Vican/issues"
+	},
+	"homepage": "https://github.com/LeonBonetti/Vican#readme",
+	"dependencies": {
+		"git-state": "^4.1.0",
+		"shelljs": "^0.8.3"
+	},
+	"devDependencies": {
+		"@types/shelljs": "^0.8.5",
+		"ts-node": "^8.2.0",
+		"tslint": "^5.16.0",
+		"typescript": "^3.4.5"
+	}
+}
