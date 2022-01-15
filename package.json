@@ -30,7 +30,7 @@
 	"homepage": "https://github.com/LeonBonetti/Vican#readme",
 	"dependencies": {
 		"git-state": "^4.1.0",
-		"shelljs": "^0.8.3"
+		"shelljs": "^0.8.5"
 	},
 	"devDependencies": {
 		"@types/shelljs": "^0.8.5",
